@@ -1,0 +1,30 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pill logo">
+  <defs>
+    <!-- ไล่สีส้ม (ปรับได้ตามธีม) -->
+    <linearGradient id="pillGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fdba74"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <!-- ไฮไลต์ขาวโปร่ง -->
+    <linearGradient id="shineGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.85)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+    <!-- เงาอ่อน -->
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#f97316" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- กลุ่มหมุนเล็กน้อยให้ดูลอย -->
+  <g transform="translate(64 64) rotate(-22) translate(-64 -64)" filter="url(#softShadow)">
+    <!-- ครึ่งซ้าย -->
+    <rect x="24" y="44" width="80" height="40" rx="20" fill="url(#pillGrad)"/>
+    <!-- เส้นแบ่งแคปซูล -->
+    <rect x="63.5" y="46" width="1" height="36" fill="rgba(255,255,255,0.65)"/>
+    <!-- ไฮไลต์ -->
+    <path d="M36 50c14-10 42-10 56 0v6c-18-8-38-8-56 0V50z" fill="url(#shineGrad)"/>
+    <!-- เส้นขอบเบา ๆ -->
+    <rect x="24.5" y="44.5" width="79" height="39" rx="19.5" stroke="rgba(249,115,22,0.45)"/>
+  </g>
+</svg>

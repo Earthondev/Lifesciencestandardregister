@@ -1,0 +1,3 @@
+id_no,name,storage,material,cas,manufacturer,supplier,concentration,concentration_unit,packing_size,packing_unit,lot,date_received,certificate_expiry,lab_expiry_date,test_group,status,available_qty,date_opened,date_disposed,deeplink_in,deeplink_out,qr_in,qr_out
+LSR-Glucose-24-001,Glucose Standard,Room Temperature,Solid,50-99-7,Sigma-Aldrich,ChemSupply Co.,100,mg/mL,1,g,GLC001,2024-01-15,2025-01-15,2025-01-15,Biochemistry,Unopened,1,,,,https://example.com/in,https://example.com/out,QR_IN_001,QR_OUT_001
+LSR-Protein-24-002,Protein Standard,4°C,Liquid,9002-84-0,Bio-Rad,LabSupply Inc.,2,mg/mL,5,mL,PRT002,2024-02-01,2025-02-01,2025-02-01,Protein Analysis,In-Use,3.5,2024-02-15,,https://example.com/in,https://example.com/out,QR_IN_002,QR_OUT_002

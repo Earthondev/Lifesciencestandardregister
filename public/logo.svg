@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ea580c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="pillGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8fafc;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Main pill icon -->
+  <g transform="translate(40, 20)">
+    <!-- Pill background -->
+    <ellipse cx="30" cy="20" rx="28" ry="18" fill="url(#pillGradient)" stroke="#e2e8f0" stroke-width="1" filter="url(#shadow)"/>
+    
+    <!-- Pill division line -->
+    <line x1="10" y1="20" x2="50" y2="20" stroke="#cbd5e1" stroke-width="2"/>
+    
+    <!-- Small dots on pill -->
+    <circle cx="20" cy="15" r="2.5" fill="#94a3b8"/>
+    <circle cx="40" cy="15" r="2.5" fill="#94a3b8"/>
+    <circle cx="20" cy="25" r="2.5" fill="#94a3b8"/>
+    <circle cx="40" cy="25" r="2.5" fill="#94a3b8"/>
+    
+    <!-- Cross symbol -->
+    <g stroke="#dc2626" stroke-width="4" stroke-linecap="round">
+      <line x1="25" y1="15" x2="35" y2="25"/>
+      <line x1="35" y1="15" x2="25" y2="25"/>
+    </g>
+  </g>
+  
+  <!-- Text -->
+  <g transform="translate(90, 15)">
+    <!-- Main title -->
+    <text x="0" y="25" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1f2937">
+      Life Science Standards
+    </text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="45" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">
+      Register System
+    </text>
+    
+    <!-- Decorative line -->
+    <line x1="0" y1="50" x2="100" y2="50" stroke="url(#bgGradient)" stroke-width="2"/>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+key,value
+id_prefix,LS
+fuzzy_threshold,0.82
+fuzzy_max_results,5
+timezone,Asia/Bangkok
+expiry_warning_days,30
+default_status,Unopened
+auto_cas_lookup,true
+line_notify_enabled,false
+backup_enabled,true

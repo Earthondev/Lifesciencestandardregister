@@ -1,0 +1,4 @@
+email,password_hash,name,role,permissions,created_at,is_active,phone
+admin@lifescience.com,5d41402abc4b2a76b9719d911017c592,Administrator,admin,"read,write,delete,admin",2024-01-01T00:00:00Z,true,+66-2-123-4567
+user@lifescience.com,5d41402abc4b2a76b9719d911017c592,Lab Technician,user,"read,write",2024-01-15T09:00:00Z,true,+66-2-234-5678
+viewer@lifescience.com,5d41402abc4b2a76b9719d911017c592,Lab Viewer,viewer,"read",2024-02-01T08:30:00Z,true,+66-2-345-6789
