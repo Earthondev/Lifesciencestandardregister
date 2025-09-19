@@ -78,7 +78,7 @@ export default function LoginPage() {
           {/* Logo and Title */}
           <div className="text-center mb-8">
             <div className="flex justify-center mb-4">
-              <Logo size={80} />
+              <Logo width={200} height={50} />
             </div>
             <h1 className="text-2xl font-bold text-gray-800 mb-2">Life Science Standards Register</h1>
             <p className="text-gray-600 text-sm">ระบบลงทะเบียนสารมาตรฐาน</p>

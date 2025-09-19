@@ -42,7 +42,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" 
           rel="stylesheet" 
         />
-        <link rel="icon" href="/pill.svg" type="image/svg+xml" />
+        <link rel="icon" href="/life-science-logo.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <meta name="mobile-web-app-capable" content="yes" />

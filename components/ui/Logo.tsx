@@ -1,47 +1,26 @@
 import React from 'react'
 import Image from 'next/image'
-import { useTheme } from '@/lib/theme'
 
 interface LogoProps {
-  size?: number
+  width?: number
+  height?: number
   className?: string
   showText?: boolean
 }
 
 export const Logo: React.FC<LogoProps> = ({ 
-  size = 32, 
+  width = 160, 
+  height = 40, 
   className = '',
   showText = false 
 }) => {
-  const { theme } = useTheme()
-  
-  // เลือกโลโก้ตามธีม
-  const getLogoSrc = () => {
-    switch (theme) {
-      case 'dark':
-        return '/pill-dark.svg'
-      case 'green':
-        return '/pill.svg' // ใช้ไฟล์ pill.svg ที่อัปเดตแล้ว
-      case 'orange':
-        return '/pill-white-orange-circle.svg'
-      case 'blue':
-        return '/pill.svg' // ใช้ไฟล์ pill.svg ที่อัปเดตแล้ว
-      case 'light':
-        return '/pill.svg' // ใช้ไฟล์ pill.svg ที่อัปเดตแล้ว
-      default:
-        return '/pill.svg' // ใช้ไฟล์ pill.svg ที่อัปเดตแล้ว
-    }
-  }
-  
-  const logoSrc = getLogoSrc()
-  
   return (
     <div className={`flex items-center space-x-2 ${className}`}>
       <Image
-        src={logoSrc}
+        src="/life-science-logo.svg"
         alt="Life Science Standards Logo"
-        width={size}
-        height={size}
+        width={width}
+        height={height}
         className="flex-shrink-0"
         priority
       />

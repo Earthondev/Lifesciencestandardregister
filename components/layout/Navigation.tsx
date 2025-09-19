@@ -75,12 +75,8 @@ export default function Navigation({ className = '' }: NavigationProps) {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <Logo size={32} />
-            <div>
-              <h1 className="text-xl font-bold text-gray-800">Life Science Standards</h1>
-              <p className="text-xs text-gray-600">Register System</p>
-            </div>
+          <div className="flex items-center">
+            <Logo width={160} height={40} />
           </div>
 
           {/* Desktop Navigation */}

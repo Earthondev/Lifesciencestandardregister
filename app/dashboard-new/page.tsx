@@ -153,7 +153,7 @@ export default function DashboardNewPage() {
       <div className="bg-white/95 backdrop-blur-sm border border-white/20 mx-4 mt-4 rounded-xl shadow-lg">
         <div className="flex items-center justify-between p-4">
           <div className="flex items-center space-x-4">
-            <Logo size={48} />
+            <Logo width={120} height={30} />
             <div>
               <h1 className="text-xl font-bold text-gray-800">Dashboard</h1>
               <p className="text-sm text-gray-600">ภาพรวมการจัดการสารมาตรฐานในห้องแล็บ</p>
