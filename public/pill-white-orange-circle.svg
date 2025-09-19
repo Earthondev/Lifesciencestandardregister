@@ -1,0 +1,58 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="White pill in orange circle logo">
+  <defs>
+    <!-- วงกลมสีส้มไล่สี -->
+    <radialGradient id="circleGrad" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="50%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </radialGradient>
+    
+    <!-- เม็ดยาสีขาวไล่สี -->
+    <linearGradient id="pillGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    
+    <!-- ไฮไลต์ขาวโปร่งใส -->
+    <linearGradient id="shineGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.9)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.1)"/>
+    </linearGradient>
+    
+    <!-- เงาอ่อน -->
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#c2410c" flood-opacity="0.3"/>
+    </filter>
+    
+    <!-- เงาเม็ดยา -->
+    <filter id="pillShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- วงกลมสีส้ม -->
+  <circle cx="64" cy="64" r="60" fill="url(#circleGrad)" filter="url(#softShadow)"/>
+  
+  <!-- ไฮไลต์วงกลม -->
+  <circle cx="64" cy="64" r="60" fill="url(#shineGrad)" opacity="0.3"/>
+  
+  <!-- เม็ดยาสีขาว -->
+  <g transform="translate(64 64) rotate(-15) translate(-64 -64)" filter="url(#pillShadow)">
+    <!-- ตัวเม็ดยา -->
+    <rect x="44" y="54" width="40" height="20" rx="10" fill="url(#pillGrad)"/>
+    
+    <!-- เส้นแบ่งแคปซูล -->
+    <rect x="63.5" y="56" width="1" height="16" fill="rgba(0,0,0,0.1)"/>
+    
+    <!-- ไฮไลต์เม็ดยา -->
+    <path d="M48 58c8-4 16-4 24 0v2c-8-2-16-2-24 0V58z" fill="rgba(255,255,255,0.8)"/>
+    
+    <!-- จุดเล็กๆ บนเม็ดยา -->
+    <circle cx="52" cy="64" r="1.5" fill="rgba(0,0,0,0.1)"/>
+    <circle cx="76" cy="64" r="1.5" fill="rgba(0,0,0,0.1)"/>
+  </g>
+  
+  <!-- ไฮไลต์วงกลมด้านบน -->
+  <ellipse cx="64" cy="44" rx="35" ry="15" fill="rgba(255,255,255,0.4)"/>
+</svg>

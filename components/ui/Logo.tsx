@@ -21,9 +21,15 @@ export const Logo: React.FC<LogoProps> = ({
       case 'dark':
         return '/pill-dark.svg'
       case 'green':
-        return '/pill-green.svg'
+        return '/pill-white-green-circle.svg'
+      case 'orange':
+        return '/pill-white-orange-circle.svg'
+      case 'blue':
+        return '/pill-white-green-circle.svg' // ใช้เขียวเป็น default สำหรับ blue
+      case 'light':
+        return '/pill-white-green-circle.svg' // ใช้เขียวเป็น default สำหรับ light
       default:
-        return '/pill.svg'
+        return '/pill-white-green-circle.svg'
     }
   }
   

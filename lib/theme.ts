@@ -114,22 +114,22 @@ export const themeConfigs: Record<Theme, ThemeConfig> = {
   green: {
     name: 'ธีมเขียว',
     colors: {
-      primary: 'green-500',
-      secondary: 'green-600',
-      background: 'green-50',
+      primary: 'green-600',
+      secondary: 'green-700',
+      background: 'emerald-50',
       surface: 'white',
       text: 'gray-800',
       textSecondary: 'gray-600',
-      border: 'green-200',
-      accent: 'green-400',
+      border: 'emerald-200',
+      accent: 'emerald-500',
       success: 'green-600',
-      warning: 'yellow-500',
+      warning: 'amber-500',
       error: 'red-500'
     },
     gradients: {
-      primary: 'from-green-500 to-emerald-500',
-      background: 'from-green-50 via-white to-green-50',
-      surface: 'from-white/95 to-white/90'
+      primary: 'from-green-600 via-emerald-600 to-teal-600',
+      background: 'from-emerald-50 via-green-50 to-teal-50',
+      surface: 'from-white/98 to-emerald-50/30'
     }
   }
 }
