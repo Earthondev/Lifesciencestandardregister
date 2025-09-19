@@ -25,7 +25,7 @@ export const Input: React.FC<InputProps> = ({
   return (
     <div className="w-full">
       {label && (
-        <label htmlFor={inputId} className="block text-sm font-medium text-gray-700 mb-2">
+        <label htmlFor={inputId} className="label">
           {label}
         </label>
       )}
@@ -42,10 +42,10 @@ export const Input: React.FC<InputProps> = ({
         <input
           id={inputId}
           className={cn(
-            'w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200',
+            'input',
             leftIcon && 'pl-10',
             rightIcon && 'pr-10',
-            error && 'border-red-500 focus:ring-red-500',
+            error && 'border-danger focus:ring-danger focus:ring-opacity-25',
             className
           )}
           {...props}
@@ -61,11 +61,11 @@ export const Input: React.FC<InputProps> = ({
       </div>
       
       {error && (
-        <p className="mt-1 text-sm text-red-600">{error}</p>
+        <p className="mt-1 text-sm text-danger">{error}</p>
       )}
       
       {helperText && !error && (
-        <p className="mt-1 text-sm text-gray-500">{helperText}</p>
+        <p className="mt-1 text-sm text-ink2">{helperText}</p>
       )}
     </div>
   )

@@ -71,7 +71,7 @@ export default function Navigation({ className = '' }: NavigationProps) {
   }
 
   return (
-    <nav className={`bg-white shadow-lg border-b border-gray-200 ${className}`}>
+    <nav className={`bg-white shadow-lg border-b border-border ${className}`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}

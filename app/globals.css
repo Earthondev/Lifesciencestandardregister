@@ -4,6 +4,25 @@
 
 @layer base {
   :root {
+    /* Design System Colors */
+    --c-primary: #0F766E;
+    --c-primary-hover: #115E59;
+    --c-accent: #10B981;
+    --c-surface: #F8FAF9;
+    --c-border: #E5E7EB;
+    --c-ink: #0B1320;
+    --c-ink-2: #475569;
+    --c-success: #059669;
+    --c-warning: #D97706;
+    --c-danger: #DC2626;
+    
+    /* Design System Spacing & Layout */
+    --r-card: 10px;
+    --gap: 16px;
+    --gap-lg: 24px;
+    --shadow: 0 1px 2px rgba(0,0,0,.04);
+    
+    /* Typography */
     --font-inter: 'Inter', sans-serif;
     --font-sarabun: 'Sarabun', sans-serif;
   }
@@ -14,30 +33,123 @@
   
   body {
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    background: linear-gradient(180deg, #FFFFFF, var(--c-surface));
+    color: var(--c-ink);
   }
 }
 
 @layer components {
+  /* Card Components */
+  .card {
+    background: #fff;
+    border: 1px solid var(--c-border);
+    border-radius: var(--r-card);
+    box-shadow: var(--shadow);
+    padding: 20px;
+  }
+  
   .glass-card {
     @apply bg-white/95 backdrop-blur-sm border border-white/20 shadow-xl;
   }
   
+  /* Button Components */
   .btn-primary {
-    @apply bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-medium px-6 py-3 rounded-lg transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5;
+    background: var(--c-primary);
+    color: #fff;
+    border: 1px solid var(--c-primary);
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease;
   }
   
-  .btn-secondary {
-    @apply bg-gradient-to-r from-gray-100 to-gray-200 hover:from-gray-200 hover:to-gray-300 text-gray-700 font-medium px-6 py-3 rounded-lg transition-all duration-200 hover:shadow-md;
+  .btn-primary:hover {
+    background: var(--c-primary-hover);
+    border-color: var(--c-primary-hover);
   }
   
-  .btn-outline {
-    @apply border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-medium px-6 py-3 rounded-lg transition-all duration-200;
+  .btn-ghost {
+    background: transparent;
+    border: 1px solid var(--c-border);
+    color: var(--c-ink);
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s ease;
   }
   
-  .input-field {
-    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200;
+  .btn-ghost:hover {
+    border-color: #CBD5E1;
+    background: var(--c-surface);
   }
   
+  /* Form Components */
+  .input, .select, .date {
+    width: 100%;
+    height: 42px;
+    padding: 8px 12px;
+    border: 1px solid var(--c-border);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--c-ink);
+    transition: all 0.2s ease;
+  }
+  
+  .input:focus, .select:focus, .date:focus {
+    outline: 2px solid rgba(16,185,129,.25);
+    border-color: var(--c-accent);
+  }
+  
+  .label {
+    font-size: 12px;
+    color: var(--c-ink-2);
+    margin-bottom: 6px;
+    display: block;
+  }
+  
+  /* Table Components */
+  .table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  
+  .table th, .table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--c-border);
+  }
+  
+  .table tbody tr:hover {
+    background: #F1F5F9;
+  }
+  
+  /* Badge Components */
+  .badge {
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    border: 1px solid var(--c-border);
+  }
+  
+  .badge--unopened {
+    color: var(--c-primary);
+    background: #ECFDF5;
+    border-color: #A7F3D0;
+  }
+  
+  .badge--inuse {
+    color: #065F46;
+    background: #D1FAE5;
+    border-color: #86EFAC;
+  }
+  
+  .badge--disposed {
+    color: #334155;
+    background: #F8FAFC;
+    border-color: #E2E8F0;
+  }
+  
+  /* Status Badge (Legacy) */
   .status-badge {
     @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
   }
@@ -54,14 +166,12 @@
     @apply bg-red-100 text-red-800;
   }
   
+  /* Stat Card */
   .stat-card {
     @apply bg-gradient-to-br from-orange-50 to-orange-100 border border-orange-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300;
   }
   
-  .molecule-animation {
-    @apply animate-float;
-  }
-  
+  /* Loading Spinner */
   .loading-spinner {
     @apply animate-spin rounded-full h-6 w-6 border-b-2 border-orange-500;
   }

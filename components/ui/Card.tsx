@@ -17,9 +17,9 @@ export const Card: React.FC<CardProps> = ({
   const baseClasses = 'rounded-xl shadow-lg'
   
   const variants = {
-    default: 'bg-white border border-gray-200',
+    default: 'bg-white border border-border',
     glass: 'bg-white/95 backdrop-blur-sm border border-white/20',
-    stat: 'bg-gradient-to-br from-orange-50 to-orange-100 border border-orange-200'
+    stat: 'bg-gradient-to-br from-surface to-white border border-border'
   }
   
   const paddings = {
@@ -52,7 +52,7 @@ interface CardTitleProps {
 }
 
 export const CardTitle: React.FC<CardTitleProps> = ({ children, className }) => (
-  <h3 className={cn('text-xl font-bold text-gray-800', className)}>
+  <h3 className={cn('text-xl font-bold text-ink', className)}>
     {children}
   </h3>
 )
@@ -63,7 +63,7 @@ interface CardContentProps {
 }
 
 export const CardContent: React.FC<CardContentProps> = ({ children, className }) => (
-  <div className={cn('text-gray-600', className)}>
+  <div className={cn('text-ink2', className)}>
     {children}
   </div>
 )

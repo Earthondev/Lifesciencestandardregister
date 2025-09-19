@@ -8,7 +8,20 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: {
+        // Design System Colors
+        primary: '#0F766E',
+        primaryHover: '#115E59',
+        accent: '#10B981',
+        surface: '#F8FAF9',
+        border: '#E5E7EB',
+        ink: '#0B1320',
+        ink2: '#475569',
+        success: '#059669',
+        warning: '#D97706',
+        danger: '#DC2626',
+        
+        // Legacy colors for backward compatibility
+        orange: {
           50: '#fff7ed',
           100: '#ffedd5',
           200: '#fed7aa',
@@ -32,6 +45,13 @@ module.exports = {
           800: '#1e293b',
           900: '#0f172a',
         }
+      },
+      borderRadius: {
+        md: '10px',
+        lg: '12px',
+      },
+      boxShadow: {
+        subtle: '0 1px 2px rgba(0,0,0,.04)',
       },
       fontFamily: {
         'thai': ['Sarabun', 'sans-serif'],

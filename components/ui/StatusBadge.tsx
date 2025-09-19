@@ -21,9 +21,9 @@ export const StatusBadge: React.FC<StatusBadgeProps> = ({
   }
   
   const variants = {
-    'Unopened': 'bg-blue-100 text-blue-800',
-    'In-Use': 'bg-yellow-100 text-yellow-800',
-    'Disposed': 'bg-red-100 text-red-800'
+    'Unopened': 'badge--unopened',
+    'In-Use': 'badge--inuse',
+    'Disposed': 'badge--disposed'
   }
   
   const icons = {
@@ -39,7 +39,7 @@ export const StatusBadge: React.FC<StatusBadgeProps> = ({
   }
   
   return (
-    <span className={cn(baseClasses, sizes[size], variants[status])}>
+    <span className={cn('badge', sizes[size], variants[status])}>
       {showIcon && (
         <span className="mr-1">{icons[status]}</span>
       )}
