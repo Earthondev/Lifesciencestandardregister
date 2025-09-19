@@ -16,7 +16,18 @@ export const Logo: React.FC<LogoProps> = ({
   const { theme } = useTheme()
   
   // เลือกโลโก้ตามธีม
-  const logoSrc = theme === 'dark' ? '/pill-dark.svg' : '/pill.svg'
+  const getLogoSrc = () => {
+    switch (theme) {
+      case 'dark':
+        return '/pill-dark.svg'
+      case 'green':
+        return '/pill-green.svg'
+      default:
+        return '/pill.svg'
+    }
+  }
+  
+  const logoSrc = getLogoSrc()
   
   return (
     <div className={`flex items-center space-x-2 ${className}`}>

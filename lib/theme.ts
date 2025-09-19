@@ -158,7 +158,7 @@ interface ThemeProviderProps {
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   children,
-  defaultTheme = 'light'
+  defaultTheme = 'green'
 }) => {
   const [theme, setThemeState] = useState<Theme>(defaultTheme)
 
@@ -181,7 +181,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   }
 
   const toggleTheme = () => {
-    const themes: Theme[] = ['light', 'dark', 'orange', 'blue', 'green']
+    const themes: Theme[] = ['green', 'light', 'dark', 'orange', 'blue']
     const currentIndex = themes.indexOf(theme)
     const nextIndex = (currentIndex + 1) % themes.length
     setThemeState(themes[nextIndex])
