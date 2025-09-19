@@ -5,17 +5,24 @@ import { useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
 import { StatusBadge } from '@/components/ui/StatusBadge'
-import { Modal } from '@/components/ui/Modal'
-import ChemicalBackground from '@/components/ChemicalBackground'
+// import { Modal } from '@/components/ui/Modal' // ไม่ได้ใช้
+// import ChemicalBackground from '@/components/ChemicalBackground' // ไม่ได้ใช้
 import { useGoogleSheets } from '@/lib/googleSheets'
 import { notificationManager } from '@/lib/notifications'
-import { formatDate } from '@/lib/formatters'
+import { formatDate } from '@/lib/utils'
 import { StandardsRegister, StatusLog } from '@/types'
 
 interface DetailsPageProps {
   params: {
     id: string
   }
+}
+
+// Required for static export
+export async function generateStaticParams() {
+  // Return empty array for now since we don't have predefined IDs
+  // In a real app, you would fetch all possible IDs from your data source
+  return []
 }
 
 export default function DetailsPage({ params }: DetailsPageProps) {
@@ -121,7 +128,7 @@ export default function DetailsPage({ params }: DetailsPageProps) {
   }
 
   return (
-    <ChemicalBackground>
+    <div className="min-h-screen bg-gradient-to-br from-surface via-white to-surface">
 
       {/* Header */}
       <div className="bg-white/95 backdrop-blur-sm border border-white/20 mx-4 mt-4 rounded-xl shadow-lg">
@@ -528,6 +535,6 @@ export default function DetailsPage({ params }: DetailsPageProps) {
           </div>
         )}
       </div>
-    </ChemicalBackground>
+    </div>
   )
 }
